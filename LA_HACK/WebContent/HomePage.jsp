@@ -86,7 +86,35 @@
 		<table id="questionTable">
 		<tr><td>
 		<div class="questionDiv">
-		<img src="./images/profile_image_default.png" alt="The image" width="80" height="80">
+			<div class="img">
+			<img src="./images/profile_image_default.png" alt="The image" width="100" height="100">
+			</div>
+			<div class="question">
+			sadhfajksdhfkjashdfasdjfhaskjdfkasjhdkfjahskdjfhaksdhfjkashdfjkadskfh
+			asdfjasdfhkajshdkfjahskdjfhasjdhfkjahskdjfhajk
+			</div>
+		</div>
+		</td></tr>
+		<tr><td>
+		<div class="questionDiv">
+			<div class="img">
+			<img src="./images/profile_image_default.png" alt="The image" width="100" height="100">
+			</div>
+			<div class="question">
+			sadhfajksdhfkjashdfasdjfhaskjdfkasjhdkfjahskdjfhaksdhfjkashdfjkadskfh
+			asdfjasdfhkajshdkfjahskdjfhasjdhfkjahskdjfhajk
+			</div>
+		</div>
+		</td></tr>
+		<tr><td>
+		<div class="questionDiv">
+			<div class="img">
+			<img src="./images/profile_image_default.png" alt="The image" width="100" height="100">
+			</div>
+			<div class="question">
+			sadhfajksdhfkjashdfasdjfhaskjdfkasjhdkfjahskdjfhaksdhfjkashdfjkadskfh
+			asdfjasdfhkajshdkfjahskdjfhasjdhfkjahskdjfhajk
+			</div>
 		</div>
 		</td></tr>
 		</table>

@@ -17,6 +17,7 @@ body{
 	background-color:white;
 	width:75%;
 	height:1000px;
+	margin-top:50px;
 	overflow:auto;
 }
 #left{
@@ -41,6 +42,30 @@ body{
 	position:absolute;
 	top:5px;
 	left:100%;
+}
+#questionTable{
+	width:100%;
+}
+.questionDiv{
+	height:200px;
+	width:100%;
+	background:#787877;
+}
+.img{
+	float:left;
+	width:10%;
+	margin-left:30px;
+}
+.img img{
+	border-radius:50px;
+	margin-top:10%;
+}
+.question{
+	width:90%;
+	margin-top:10px;
+	margin-left:5%;
+	font-size:1.3em;
+	line-height:30px;
 }
 .hc-top-up { background: rgba(0, 0, 0, 0); border-color: rgba(255, 255, 255, .4); transition: .5s; }
 .hc-top-nd { background: rgba(255, 255, 255, .9); border: none; box-shadow: 0px 0px 5px #888888; transition: .5s; }
