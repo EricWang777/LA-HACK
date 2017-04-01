@@ -6,7 +6,6 @@ import java.util.Set;
 
 public class UserDatabase {
 	public static Map<String, User> allUsers;
-	public static Map<String, Answer> allAnwers;
 	
 	/**
 	 * Constructor
