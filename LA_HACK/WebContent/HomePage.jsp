@@ -83,6 +83,13 @@
 		</nav>
 
 		<div id="right">
+		<table id="questionTable">
+		<tr><td>
+		<div class="questionDiv">
+		<img src="./images/profile_image_default.png" alt="The image" width="80" height="80">
+		</div>
+		</td></tr>
+		</table>
 		</div>
 		
 		
