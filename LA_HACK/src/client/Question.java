@@ -7,11 +7,23 @@ public class Question {
 	private String asker; // the user who ask this question
 	private String answerer; // the user who will answer this question
 	private double price; // price of this question
+	private String content;
 	private int numberOfListener; 
-	private Set<String> listenerUsernames;
 	
+	/**
+	 * 	Method
+	 */
+	
+	/**
+	 * 
+	 * @param username
+	 * @return true: successfully add lisenter to the set
+	 * false: unsucessfully
+	 */
+	
+
 	public Question(){
-		listenerUsernames = new HashSet<String>();
+		
 	}
 	
 	public String getAsker() {
@@ -38,6 +50,21 @@ public class Question {
 	public void setNumberOfListener(int numberOfListener) {
 		this.numberOfListener = numberOfListener;
 	}
+
+
+
+
+	public String getContent() {
+		return content;
+	}
+
+
+
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+	
 	
 	
 }
