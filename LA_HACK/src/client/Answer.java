@@ -7,7 +7,7 @@ public class Answer {
 	private String content;
 	private String asker;
 	private String answers;
-	private Set<String> listeners;
+	private Set<String> sneakers;
 	
 	private final double pricePerListen = 1;
 	private final double payForAsker = pricePerListen/2;
@@ -15,7 +15,7 @@ public class Answer {
 	
 	
 	public Answer(){
-		listeners = new HashSet<String>();
+		sneakers = new HashSet<String>();
 	}
 	
 	public String getContent() {
@@ -38,7 +38,7 @@ public class Answer {
 	}
 	
 	public boolean addListener(String username){
-		return listeners.add(username);
+		return sneakers.add(username);
 		// need to pay for asker and answer
 	}
 	
