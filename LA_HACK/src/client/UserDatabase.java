@@ -6,12 +6,18 @@ import java.util.Set;
 
 public class UserDatabase {
 	public static Map<String, User> allUsers;
+	public static User user;
 	
 	/**
 	 * Constructor
 	 */
 	public UserDatabase(){
 		allUsers = new HashMap<String, User>();
+		user = new User();
+		user.setUsername("Tester");
+		user.addFollowing("Answerer 1");
+		user.addFollowing("Answerer 2");
+		user.addFollowing("Answerer 3");
 	}
 	
 	/**
