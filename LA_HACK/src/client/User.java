@@ -7,7 +7,7 @@ public class User {
 	private String username;
 	private String password;
 	private Map<String, String> question;
-	
+	private double money;
 	
 	
 	public String getUsername() {
@@ -21,6 +21,12 @@ public class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public double getMoney() {
+		return money;
+	}
+	public void setMoney(double money) {
+		this.money = money;
 	}
 	
 	
