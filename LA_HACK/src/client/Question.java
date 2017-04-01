@@ -8,8 +8,8 @@ public class Question {
 	private String answerer; // the user who will answer this question
 	private double price; // price of this question
 	private String content;
-	private int numberOfListener;
-	private Answer answer;
+	private String answer;
+	private double numOfSneakers;
 	
 	
 	/**
@@ -24,8 +24,13 @@ public class Question {
 	 */
 	
 
-	public Question(){
-		
+	public Question(String asker, String answerer, String content, double price){
+		this.asker = asker;
+		this.answerer = answerer;
+		this.content = content;
+		this.price = price;
+		this.answer = "";
+		this.numOfSneakers = 0;
 	}
 	
 	public String getAsker() {
@@ -46,33 +51,33 @@ public class Question {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public int getNumberOfListener() {
-		return numberOfListener;
-	}
-	public void setNumberOfListener(int numberOfListener) {
-		this.numberOfListener = numberOfListener;
-	}
-
-
-
-
+	
 	public String getContent() {
 		return content;
 	}
-
-
-
-
+	
 	public void setContent(String content) {
 		this.content = content;
 	}
 
-	public Answer getAnswer() {
+	public String getAnswer() {
 		return answer;
 	}
 
-	public void setAnswer(Answer answer) {
+	public void setAnswer(String answer) {
 		this.answer = answer;
+	}
+
+	public double getNumOfSneakers() {
+		return numOfSneakers;
+	}
+
+	public void addSneakers() {
+		this.numOfSneakers++;
+	}
+	
+	public boolean hasAnswer(){
+		return !this.answer.isEmpty();
 	}
 	
 	

@@ -5,8 +5,8 @@ import java.util.Map;
 import java.util.Set;
 
 public class UserDatabase {
-	private Map<String, User> allUsers;
-	private Map<String, Answer> allAnwers;
+	public static Map<String, User> allUsers;
+	public static Map<String, Answer> allAnwers;
 	
 	/**
 	 * Constructor
