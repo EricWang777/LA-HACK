@@ -22,7 +22,11 @@ a:hover { cursor: pointer; }
 /*------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
+<<<<<<< HEAD
 body{ font-size: 14px; font-family: "ÃƒÂ©Ã‚Â»Ã¢â‚¬ËœÃƒÂ¤Ã‚Â½Ã¢â‚¬Å“-ÃƒÂ§Ã‚Â®Ã¢â€šÂ¬","ÃƒÂ©Ã‚Â»Ã¢â‚¬ËœÃƒÂ¤Ã‚Â½Ã¢â‚¬Å“","ÃƒÂ¥Ã‚Â¾Ã‚Â®ÃƒÂ¨Ã‚Â½Ã‚Â¯ÃƒÂ©Ã¢â‚¬ÂºÃ¢â‚¬Â¦ÃƒÂ©Ã‚Â»Ã¢â‚¬Ëœ", Arial, Gotham, "Helvetica Neue", Helvetica, sans-serif; width: 100%; margin: 0 auto; overflow-x: hidden; }
+=======
+body{ font-size: 14px; font-family: "黑体-简","黑体","微软雅黑", Arial, Gotham, "Helvetica Neue", Helvetica, sans-serif; width: 100%; margin: 0 auto; background-color: #313131; overflow-x: hidden; }
+>>>>>>> 72114b8622330cae8f669ee9b6cd3ac4358fd1ba
 
 .wrap{width:100%;height:1000px;}
 .wrap p{font-size: 48px;text-align: center;color: #fff;padding-top: 280px;line-height: 60px;}
@@ -79,6 +83,7 @@ body{ font-size: 14px; font-family: "ÃƒÂ©Ã‚Â»Ã¢â‚¬ËœÃƒÂ¤Ã�
 }
 
 
+<<<<<<< HEAD
 /*ÃƒÂ¤Ã‚Â¸Ã¢â€šÂ¬ÃƒÂ§Ã‚ÂºÃ‚Â§ÃƒÂ¥Ã‚Â¯Ã‚Â¼ÃƒÂ¨Ã‹â€ Ã‚Âª*/
 .nav-main{
 	position: fixed;
@@ -86,6 +91,15 @@ body{ font-size: 14px; font-family: "ÃƒÂ©Ã‚Â»Ã¢â‚¬ËœÃƒÂ¤Ã�
 	z-index: 12;
 	height: 100%;
 	width: 6.5%;
+=======
+/*一级导航*/
+.nav-main{
+	position: fixed;
+	top: 0;
+	z-index: 12;
+	height: 100%;
+	width: 100px;
+>>>>>>> 72114b8622330cae8f669ee9b6cd3ac4358fd1ba
 	color: #fff;
 	background: #111213;
 }
@@ -101,7 +115,11 @@ body{ font-size: 14px; font-family: "ÃƒÂ©Ã‚Â»Ã¢â‚¬ËœÃƒÂ¤Ã�
 }
 .nav-ul li a{
 	display: block;
+<<<<<<< HEAD
 	width: 100%;
+=======
+	width: 100px;
+>>>>>>> 72114b8622330cae8f669ee9b6cd3ac4358fd1ba
 	height: 100px;
 	overflow: hidden;
 	text-align: center;
@@ -116,7 +134,11 @@ body{ font-size: 14px; font-family: "ÃƒÂ©Ã‚Â»Ã¢â‚¬ËœÃƒÂ¤Ã�
 	position: absolute;
 	left: -240px;
 	top: 0px;
+<<<<<<< HEAD
 	width: 100%;
+=======
+	width: 200px;
+>>>>>>> 72114b8622330cae8f669ee9b6cd3ac4358fd1ba
 	height: 100%;
 	background: #629feb;
 	z-index: 1;
@@ -154,7 +176,11 @@ body{ font-size: 14px; font-family: "ÃƒÂ©Ã‚Â»Ã¢â‚¬ËœÃƒÂ¤Ã�
 	position: fixed;
 	left: 100px;
 	top: 0;
+<<<<<<< HEAD
 	width: 285%;
+=======
+	width: 240px;
+>>>>>>> 72114b8622330cae8f669ee9b6cd3ac4358fd1ba
 	height: 100%;
 	background: #252829;
 	transform: rotateY(120deg);
@@ -188,7 +214,11 @@ body{ font-size: 14px; font-family: "ÃƒÂ©Ã‚Â»Ã¢â‚¬ËœÃƒÂ¤Ã�
 	visibility: visible;
 }
 
+<<<<<<< HEAD
 /*ÃƒÂ¤Ã‚ÂºÃ…â€™ÃƒÂ§Ã‚ÂºÃ‚Â§ÃƒÂ¨Ã‚ÂÃ…â€œÃƒÂ¥Ã‚ÂÃ¢â‚¬Â¢*/
+=======
+/*二级菜单*/
+>>>>>>> 72114b8622330cae8f669ee9b6cd3ac4358fd1ba
 .nav-slide-o li a{
 	line-height: 50px;
 	display: block;
@@ -225,3 +255,7 @@ body{ font-size: 14px; font-family: "ÃƒÂ©Ã‚Â»Ã¢â‚¬ËœÃƒÂ¤Ã�
 .nav-slide-o li a:hover:before{left: -60px;}
 .nav-slide-o li a span{position: relative;z-index: 1;}
 .nav-slide-o {display: none;}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 72114b8622330cae8f669ee9b6cd3ac4358fd1ba
