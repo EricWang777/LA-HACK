@@ -8,7 +8,9 @@ public class Question {
 	private String answerer; // the user who will answer this question
 	private double price; // price of this question
 	private String content;
-	private int numberOfListener; 
+	private int numberOfListener;
+	private Answer answer;
+	
 	
 	/**
 	 * 	Method
@@ -63,6 +65,14 @@ public class Question {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public Answer getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(Answer answer) {
+		this.answer = answer;
 	}
 	
 	

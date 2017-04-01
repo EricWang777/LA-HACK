@@ -1,9 +1,9 @@
 package client;
 
-public class User {
-<<<<<<< HEAD
+import java.util.Map;
 
-=======
+
+public class User {
 	private String username;
 	private String password;
 	private Map<String, String> question;
@@ -31,5 +31,4 @@ public class User {
 	
 	
 	
->>>>>>> cbd627515880b470774cc751d95d526d4c0134eb
 }
