@@ -12,17 +12,19 @@ import javax.servlet.http.HttpServletResponse;
 import data.*;
 
 import java.sql.*;
+
+import server.*;
 /**
- * Servlet implementation class SignUpServlet
+ * Servlet implementation class loginServlet
  */
-@WebServlet("/SignUpServlet")
-public class SignUpServlet extends HttpServlet {
+@WebServlet("/SignInServlet")
+public class SignInServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SignUpServlet() {
+    public SignInServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,20 +34,16 @@ public class SignUpServlet extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("In the servlet method");
-		User newUser = new User();
-		newUser.setUsername(request.getParameter("username"));
-		newUser.setPassword(request.getParameter("password"));
-		newUser.email = request.getParameter("email");
-		newUser.firstname = request.getParameter("firstname");
-		newUser.lastname = request.getParameter("lastname");
-		UserDatabase.allUsers.put(request.getParameter("username"), newUser);
+		InitializeDB.initialUser();
+		System.out.println(UserDatabase.allUsers.size());
 		
-		request.setAttribute("username", request.getParameter("username"));
+		String username = request.getParameter("username");
+		
+		InitializeDB.currentUser = UserDatabase.allUsers.get(username);
+		
+		//request.setAttribute("username", username);
 		RequestDispatcher dispatch = request.getRequestDispatcher("/HomePage.jsp");
 		dispatch.forward(request, response);
 	}
-
 	
-
 }

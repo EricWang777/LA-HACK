@@ -27,6 +27,4 @@ public class UserDatabase {
 		return true;
 	}
 	
-
-	
 }

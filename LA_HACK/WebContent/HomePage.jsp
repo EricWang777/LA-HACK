@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@ page import="client.*"%>
+<%@ page import="data.*"%>
+<%@ page import="server.*"%>
 <html lang="zh-CN">
 
 	<head>
@@ -96,19 +97,20 @@
 		</script>
 		
 		
-		<title>hahahaha</title>
+		<title>Home Page</title>
 	</head>
 	<% User currentUser;
-		if(true)
-		{ currentUser= new User();
-		currentUser.firstname="Mingzhong";
-		currentUser.lastname="Guo";
-		currentUser.setUsername("MingzhongGuo");
-		currentUser.setPassword("123456");
+		if(InitializeDB.currentUser == null)
+		{ 
+			currentUser= new User();
+			currentUser.firstname="Mingzhong";
+			currentUser.lastname="Guo";
+			currentUser.setUsername("MingzhongGuo");
+			currentUser.setPassword("123456");
 		}
 		else
 		{
-			currentUser = UserDatabase.allUsers.get(request.getAttribute("username"));
+			currentUser = InitializeDB.currentUser;
 		}%>
 	<body onmousemove="" ontouchstart="">
 

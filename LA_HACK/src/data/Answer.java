@@ -7,7 +7,9 @@ public class Answer {
 	private String content;
 	private Set<String> sneakers = new HashSet<String>();
 	
-
+	private final double pricePerListen = 1;
+	private final double payForAsker = pricePerListen/2;
+	private final double payForAnswerer = pricePerListen/2;
 	
 	
 	public Answer(){

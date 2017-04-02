@@ -7,13 +7,13 @@ import java.util.Set;
 
 
 public class User {
-	private String username;
+	public String username;
 	public String firstname;
 	public String lastname;
 	public String email;
 	public double money;
 	public String bindcardNum;
-	private String password;
+	public String password;
 	
 	public Set<String> following = new HashSet<String>();
 	public List<Question> askQuestion = new ArrayList<Question>();
@@ -27,6 +27,16 @@ public class User {
 		money = 0.0;
 	}
 	
+	public User(String username,String password,String fname,String lname,String email,double money,String cardnum)
+	{
+		this.username = username;
+		this.password = password;
+		this.firstname = fname;
+		this.lastname = lname;
+		this.email = email;
+		this.money = money;
+		this.bindcardNum = cardnum;
+	}
 	/**
 	 * @name addFollowing
 	 * @param username
