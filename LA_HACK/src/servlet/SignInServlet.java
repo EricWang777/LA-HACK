@@ -35,15 +35,41 @@ public class SignInServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		InitializeDB.initialUser();
-		System.out.println(UserDatabase.allUsers.size());
+		//System.out.println(UserDatabase.allUsers.size());
 		
 		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String errorMessage = "";
+		if(username.isEmpty())
+		{
+			response.getWriter().write("{\"login\":false , \"message\": \"Username cannot be empty\"}");
+			return;
+		}
+		if(password.isEmpty())
+		{
+			response.getWriter().write("{\"login\":false , \"message\": \"Password cannot be empty\"}");
+			return;
+		}
+		if(UserDatabase.allUsers.get(username)==null)
+		{
+			response.getWriter().write("{\"login\":false , \"message\": \"Username doesn't exist\"}");
+			return;
+		}else
+		{
+			if(!password.equals(UserDatabase.allUsers.get(username).password))
+			{
+				response.getWriter().write("{\"login\":false , \"message\": \"Wrong password\"}");
+				return;
+			}
+			else
+			{
+				InitializeDB.currentUser = UserDatabase.allUsers.get(username);
+				response.getWriter().write("{\"login\":true , \"message\": \"HomePage.jsp\"}");
+				return;
+			}
+		}
 		
-		InitializeDB.currentUser = UserDatabase.allUsers.get(username);
-		
-		//request.setAttribute("username", username);
-		RequestDispatcher dispatch = request.getRequestDispatcher("/HomePage.jsp");
-		dispatch.forward(request, response);
+
 	}
 	
 }
