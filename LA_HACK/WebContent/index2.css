@@ -47,34 +47,30 @@ body{
 	width:100%;
 }
 .questionDiv{
-	height:200px;
-<<<<<<< HEAD:LA_HACK/WebContent/index2.css
-	width:100%;
-	background:#787877;
-=======
+	padding-top:2%;
+	height:150px;
 	width:80%;
-	background:#787877;
+	font-family: 'Rufina', Georgia, Serif;
+	font-weight:bold;
 	border-radius: 50px;
 	
->>>>>>> Bingtang:WebContent/index2.css
 }
 .img{
+	text-align:center;
 	float:left;
 	width:10%;
-<<<<<<< HEAD:LA_HACK/WebContent/index2.css
-	margin-left:30px;
-=======
-	margin-left:15px;
-	margin-top: 30px;
+	
+	margin-top: 1%;
+	color:#2c88e3;
 }
 
 .answer{
 	height:160px;
-	width:75%;
+	width:83%;
 	background-color:white;
-	margin-left: 80px;
+	margin-left: 10%;
 	margin-right:10px;
-	border: 3px solid lightblue;
+	//border: 3px solid lightblue;
 	border-radius: 20px;
 }
 
@@ -84,35 +80,28 @@ button:hover{
 
 .answer button{
 	width:100px;
-	margin-top:50px;
-	margin-left:120px;
+	margin-top:2%;
+	margin-left: 10%;
 	border: 2px solid white;
 	border-radius:20px;
 	width:50%;
 	height:50px;
 	
->>>>>>> Bingtang:WebContent/index2.css
 }
 .img img{
 	border-radius:50px;
 	margin-top:10%;
-<<<<<<< HEAD:LA_HACK/WebContent/index2.css
-}
-.question{
-	width:90%;
-=======
 	width:45px;
 	height:45px;
 	
 }
 .question{
 	width:90%;
-	color:white;
->>>>>>> Bingtang:WebContent/index2.css
+	font-family: 'Rufina', Georgia, Serif;
 	margin-top:10px;
-	margin-left:5%;
-	font-size:1.3em;
-	line-height:30px;
+	margin-left:10%;
+	font-size:1.1em;
+	line-height:20px;
 }
 .hc-top-up { background: rgba(0, 0, 0, 0); border-color: rgba(255, 255, 255, .4); transition: .5s; }
 .hc-top-nd { background: rgba(255, 255, 255, .9); border: none; box-shadow: 0px 0px 5px #888888; transition: .5s; }

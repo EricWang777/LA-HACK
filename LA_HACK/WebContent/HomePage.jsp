@@ -86,37 +86,89 @@
 		<table id="questionTable">
 		<tr><td>
 		<div class="questionDiv">
-			<div class="img">
-			<img src="./images/profile_image_default.png" alt="The image" width="100" height="100">
-			</div>
 			<div class="question">
-			sadhfajksdhfkjashdfasdjfhaskjdfkasjhdkfjahskdjfhaksdhfjkashdfjkadskfh
-			asdfjasdfhkajshdkfjahskdjfhasjdhfkjahskdjfhajk
+			 Please tell me about your experience?
+			</div>
+			<div class="answer">
+				<div class="img">
+				  <img src="./images/profile_image_default.png" alt="The image" >
+				  <span>username</span>
+				</div>
+				<div class="content">
+				  <button onclick="unlock();" >Click and Pay for this answer</button>
+				</div>
 			</div>
 		</div>
 		</td></tr>
 		<tr><td>
 		<div class="questionDiv">
-			<div class="img">
-			<img src="./images/profile_image_default.png" alt="The image" width="100" height="100">
-			</div>
 			<div class="question">
-			sadhfajksdhfkjashdfasdjfhaskjdfkasjhdkfjahskdjfhaksdhfjkashdfjkadskfh
-			asdfjasdfhkajshdkfjahskdjfhasjdhfkjahskdjfhajk
+			  Some questions are used principally as polite requests, as with "Would you pass the salt?"
+			</div>
+			<div class="answer">
+				<div class="img">
+				  <img src="./images/profile_image_default.png" alt="The image" >
+				  <span>username</span>
+				</div>
+				<div class="content">
+				  <button onclick="unlock();" >Click and Pay for this answer</button>
+				</div>
 			</div>
 		</div>
 		</td></tr>
 		<tr><td>
 		<div class="questionDiv">
-			<div class="img">
-			<img src="./images/profile_image_default.png" alt="The image" width="100" height="100">
-			</div>
 			<div class="question">
-			sadhfajksdhfkjashdfasdjfhaskjdfkasjhdkfjahskdjfhaksdhfjkashdfjkadskfh
-			asdfjasdfhkajshdkfjahskdjfhasjdhfkjahskdjfhajk
+			 The principal use of questions is to elicit information from the person being addressed by indicating the information which 
+			 the speaker (or writer) desires. However, questions can also be used for a number of other purposes?
+			</div>
+			<div class="answer">
+				<div class="img">
+				  <img src="./images/profile_image_default.png" alt="The image" >
+				  <span>username</span>
+				</div>
+				<div class="content">
+				  <button onclick="unlock();" >Click and Pay for this answer</button>
+				</div>
 			</div>
 		</div>
 		</td></tr>
+		<tr><td>
+		<div class="questionDiv">
+			<div class="question">
+			 These interrogative statements serve as launching points for the academic pursuit of new knowledge
+			  by directing and delimiting an investigation of a topic, a set of studies, or an entire program of research?
+			</div>
+			<div class="answer">
+				<div class="img">
+				  <img src="./images/profile_image_default.png" alt="The image" >
+				  <span>username</span>
+				</div>
+				<div class="content">
+				  <button onclick="unlock();" >Click and Pay for this answer</button>
+				</div>
+			</div>
+		</div>
+		</td></tr>
+		<tr><td>
+		<div class="questionDiv">
+			<div class="question">
+			 Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
+			 Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
+			</div>
+			<div class="answer">
+				<div class="img">
+				  <img src="./images/profile_image_default.png" alt="The image" >
+				  <span>username</span>
+				</div>
+				<div class="content">
+				  <button onclick="unlock();" >Click and Pay for this answer</button>
+				</div>
+			</div>
+		</div>
+		</td></tr>
+		
+		
 		</table>
 		</div>
 		
@@ -125,7 +177,7 @@
 		<div class="nav-box">
 		<div class="nav">
   <ul class="nav-ul">
-  	<li><a href="#" class="home"><span>Home</span></a></li>
+  	<li><a href="#" class="home"><span>Username</span></a></li>
   	<li><a href="#" class="develop"><span>Account</span></a></li>
   	<li><a href="#" class="wechat"><span>Credit</span></a></li>
   	<li><a href="#" class="case"><span>History</span></a></li>
@@ -137,8 +189,12 @@
     <div class="nav-slide-o"></div>
     <div class="nav-slide-o">
     	<ul>
-    		<li><a href="#"><span>Profile</span></a></li>
-    		<li><a href="#"><span></span></a></li>
+    		<li><a href="#"><span>FirstName: </span></a></li>
+    		<li><a href="#"><span>LastName: </span></a></li>
+    		<li><a href="#"><span>Level: </span></a></li>
+    		<li><a href="#"><span>Question asked: </span></a></li>
+    		<li><a href="#"><span>Question answered: </span></a></li>
+    		<li><a href="#"><span>Coins: </span></a></li>
     	</ul>
     </div>
     <div class="nav-slide-o">
@@ -200,6 +256,10 @@
 	$('.nav-slide').mouseleave(function(){
 		$('.nav-slide').removeClass('hover');
 	})
+	
+	function unlock(){
+		
+	}
 
 })
 </script>
