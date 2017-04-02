@@ -8,12 +8,24 @@ import java.util.Set;
 
 public class User {
 	private String username;
+	public String firstname;
+	public String lastname;
+	public String email;
+	public double money;
+	public String bindcardNum;
 	private String password;
 	
-	private Set<String> following = new HashSet<String>();
-	private List<Question> askQuestion = new ArrayList<Question>();
-	private List<Question> answerQuestion = new ArrayList<Question>();
-	private List<Question> sneakQuestoin = new ArrayList<Question>();
+	public Set<String> following = new HashSet<String>();
+	public List<Question> askQuestion = new ArrayList<Question>();
+	public List<Question> answerQuestion = new ArrayList<Question>();
+	public List<Question> sneakQuestoin = new ArrayList<Question>();
+	
+	
+	public User()
+	{
+		bindcardNum = "0000 0000 0000 0000";
+		money = 0.0;
+	}
 	
 	/**
 	 * @name addFollowing

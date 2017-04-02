@@ -225,3 +225,11 @@ body{ font-size: 14px; font-family: "ÃƒÂ©Ã‚Â»Ã¢â‚¬ËœÃƒÂ¤Ã�
 .nav-slide-o li a:hover:before{left: -60px;}
 .nav-slide-o li a span{position: relative;z-index: 1;}
 .nav-slide-o {display: none;}
+.nav-slide-o button{
+	height:40px;
+	border-radius:10px;
+	margin-left:15px;
+	color:black;
+	text-align:center;
+}
+

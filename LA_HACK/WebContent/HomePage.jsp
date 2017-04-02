@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page import="client.*"%>
 <html lang="zh-CN">
 
 	<head>
@@ -11,12 +12,104 @@
 		<link rel="stylesheet" type="text/css" href="reset.css" />
 		<link rel="stylesheet" type="text/css" href="index2.css" />
 		<link rel="stylesheet" type="text/css" href="SideBar.css">
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
 		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script src="http://www.jq22.com/jquery/jquery-1.7.1.js"></script>
 		<script src="unified2.js" type="text/javascript" charset="utf-8"></script>
-		<title>super-H</title>
-	</head>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+		<script type="text/javascript">
+		$(function(){
+		var thisTime;
+		$('.nav-ul li').mouseleave(function(even){
+				thisTime	=	setTimeout(thisMouseOut,1000);
+		})
 
+		$('.nav-ul li').mouseenter(function(){
+			clearTimeout(thisTime);
+			var thisUB	=	$('.nav-ul li').index($(this));
+			if($.trim($('.nav-slide-o').eq(thisUB).html()) != "")
+			{
+				$('.nav-slide').addClass('hover');
+				$('.nav-slide-o').hide();
+				$('.nav-slide-o').eq(thisUB).show();
+			}
+			else{
+				$('.nav-slide').removeClass('hover');
+			}
+		})
+	
+		function thisMouseOut(){
+			$('.nav-slide').removeClass('hover');
+		}
+	 
+		$('.nav-slide').mouseenter(function(){
+			clearTimeout(thisTime);
+			$('.nav-slide').addClass('hover');
+		})
+		$('.nav-slide').mouseleave(function(){
+			$('.nav-slide').removeClass('hover');
+		})
+
+		})
+		</script>
+		
+		<script type="text/javascript">
+		var w,h,className;
+		function getSrceenWH(){
+			w = $(window).width();
+			h = $(window).height();
+			$('#dialogBg').width(w).height(h);
+		}
+
+		window.onresize = function(){  
+			getSrceenWH();
+		}  
+		$(window).resize();  
+
+		$(function(){
+			getSrceenWH();
+			
+			//show the pop-up
+			$('.box1 a').click(function(){
+				className = $(this).attr('class');
+				$('#dialogBg').fadeIn(300);
+				$('#dialog').removeAttr('class').addClass('animated '+className+'').fadeIn();
+			});
+			$('.answer button').click(function(){
+				className = $(this).attr('class');
+				$('#dialogBg1').fadeIn(300);
+				$('#dialog1').removeAttr('class').addClass('animated '+className+'').fadeIn();
+			});
+			//close the pop-up
+			$('.claseDialogBtn').click(function(){
+				$('#dialogBg').fadeOut(300,function(){
+					$('#dialog').addClass('bounceOutUp').fadeOut();
+				});
+			});
+			$('.claseDialogBtn').click(function(){
+				$('#dialogBg1').fadeOut(300,function(){
+					$('#dialog1').addClass('bounceOutUp').fadeOut();
+				});
+			});
+		});
+		</script>
+		
+		
+		<title>hahahaha</title>
+	</head>
+	<% User currentUser;
+		if(true)
+		{ currentUser= new User();
+		currentUser.firstname="Mingzhong";
+		currentUser.lastname="Guo";
+		currentUser.setUsername("MingzhongGuo");
+		currentUser.setPassword("123456");
+		}
+		else
+		{
+			currentUser = UserDatabase.allUsers.get(request.getAttribute("username"));
+		}%>
 	<body onmousemove="" ontouchstart="">
 
 		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top hc-top-up">
@@ -43,7 +136,7 @@
 				<ul id="navBox" class="nav navbar-nav navbar-right hc-navbox">
 					<li>
 						<a class="nav-on" href="#">
-							<img src="./images/home.png" alt="user_icon" width="30" height="30" class="userimage" id="user">
+						<img src="./images/home.png" alt="user_icon" width="30" height="30" class="userimage" id="user">
 						</a>
 						<a class="nav-off" href="#">Home Page</a>
 					</li>
@@ -51,14 +144,16 @@
 						<a class="nav-on" href="#">
 						<img src="./images/user.png" alt="user_icon" width="30" height="30" class="userimage" id="user">
 						</a>
-						<a class="nav-off" href="#">User Profile</a>
+						<a class="nav-off" href="#"><%=currentUser.firstname%></a>
 					</li>
-					<li>
-						<a class="nav-on" href="#">
+					
+					<li class="box1">
+						<a class="nav-on" href="javascript:;" class="bounceIn" >
 						<img src="./images/askQ.png" alt="user_icon" width="30" height="30" class="userimage" id="user">
-						</a>					
-						<a class="nav-off" href="#">Ask Question</a>
+						</a>				
+						<a class="nav-off" href="javascript:;" class="bounceIn" class="box">Ask Question</a>
 					</li>
+					
 					<li>
 						<a class="nav-on" href="#">
 						<img src="./images/notifications.png" alt="user_icon" width="30" height="30" class="userimage" id="user">
@@ -95,7 +190,7 @@
 				  <span>username</span>
 				</div>
 				<div class="content">
-				  <button onclick="unlock();" >Click and Pay for this answer</button>
+				  <button>Click and Pay for this answer</button>
 				</div>
 			</div>
 		</div>
@@ -111,7 +206,7 @@
 				  <span>username</span>
 				</div>
 				<div class="content">
-				  <button onclick="unlock();" >Click and Pay for this answer</button>
+				  <button>Click and Pay for this answer</button>
 				</div>
 			</div>
 		</div>
@@ -128,7 +223,7 @@
 				  <span>username</span>
 				</div>
 				<div class="content">
-				  <button onclick="unlock();" >Click and Pay for this answer</button>
+				  <button>Click and Pay for this answer</button>
 				</div>
 			</div>
 		</div>
@@ -145,7 +240,7 @@
 				  <span>username</span>
 				</div>
 				<div class="content">
-				  <button onclick="unlock();" >Click and Pay for this answer</button>
+				  <button>Click and Pay for this answer</button>
 				</div>
 			</div>
 		</div>
@@ -162,7 +257,7 @@
 				  <span>username</span>
 				</div>
 				<div class="content">
-				  <button onclick="unlock();" >Click and Pay for this answer</button>
+				  <button>Click and Pay for this answer</button>
 				</div>
 			</div>
 		</div>
@@ -177,8 +272,8 @@
 		<div class="nav-box">
 		<div class="nav">
   <ul class="nav-ul">
-  	<li><a href="#" class="home"><span>Username</span></a></li>
-  	<li><a href="#" class="develop"><span>Account Information</span></a></li>
+  	<li><a href="#" class="home"><span><%=currentUser.firstname%></span></a></li>
+  	<li><a href="#" class="develop"><span>Account</span></a></li>
   	<li><a href="#" class="wechat"><span>Credit</span></a></li>
   	<li><a href="#" class="case"><span>History</span></a></li>
   	<li><a href="#" class="news"><span>Contact us</span></a></li>
@@ -189,26 +284,45 @@
     <div class="nav-slide-o"></div>
     <div class="nav-slide-o">
     	<ul>
-    		<li><a href="#"><span>FirstName: </span></a></li>
-    		<li><a href="#"><span>LastName: </span></a></li>
-    		<li><a href="#"><span>Level: </span></a></li>
-    		<li><a href="#"><span>Question asked: </span></a></li>
-    		<li><a href="#"><span>Question answered: </span></a></li>
-    		<li><a href="#"><span>Coins: </span></a></li>
+    		<li><a href="#"><span>Profile</span></a></li>
+    		<li><a href="#"><span>First Name: <%=currentUser.firstname%></span></a></li>
+    		<li><a href="#"><span>Last Name: <%=currentUser.lastname%></span></a></li>
+    		<li><a href="#"><span>Email: <%=currentUser.email%></span></a></li>
     	</ul>
     </div>
     <div class="nav-slide-o">
     	<ul>
-    		<li><a href="#"><span>Content 1</span></a></li>
-    		<li><a href="#"><span>Content 2</span></a></li>
-    		<li><a href="#"><span>Content 3</span></a></li>
+    		<li><a href="#"><span>Balance($):<br/>
+    		<img src = "./images/coins.png" width="40" height="40">
+    		<%=":    "+currentUser.money%></span></a></li>
+    		<li><a href="#"><span><button>Deposit</button><button>Withdraw</button></span></a></li>
+    		<li><a href="#"><span>Card Number:<br/>
+    		<img src = "./images/credit_card.png" width="40" height="40">
+    		<%=":    "+currentUser.bindcardNum%></span></a></li>
+    		<%if(currentUser.bindcardNum.equals("0000 0000 0000 0000")) {%>
+    		<li><a href="#"><span><button>Bind a Card</button></span></a></li>
+    		<%}else{ %>
+    		<li><a href="#"><span><button>UnBind Current Card</button></span></a></li>
+    		<%} %>
     	</ul>
     </div>
     <div class="nav-slide-o">
     	<ul>
-    		<li><a href="#"><span>Content 1</span></a></li>
-    		<li><a href="#"><span>Content 2</span></a></li>
-    		<li><a href="#"><span>Content 3</span></a></li>
+    		<li><a href="#"><span>Asked Questions</span></a></li>
+    		<%for(Question q:currentUser.askQuestion)
+    		{%>
+    		<li><a href="#"><span>q.getContent()</span></a></li>
+    		<%} %>
+    		<li><a href="#"><span>Answered Questions</span></a></li>
+    		<%for(Question q:currentUser.answerQuestion)
+    		{%>
+    		<li><a href="#"><span>q.getContent()</span></a></li>
+    		<%} %>
+    		<li><a href="#"><span>Sneaked Questions</span></a></li>
+    		<%for(Question q:currentUser.sneakQuestoin)
+    		{%>
+    		<li><a href="#"><span>q.getContent()</span></a></li>
+    		<%} %>
     	</ul>
     </div>
     <div class="nav-slide-o">
@@ -221,48 +335,34 @@
 </div>
 </div>
 </div>
-
-<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-<script type="text/javascript">
-	$(function(){
-	var thisTime;
-	$('.nav-ul li').mouseleave(function(even){
-			thisTime	=	setTimeout(thisMouseOut,1000);
-	})
-
-	$('.nav-ul li').mouseenter(function(){
-		clearTimeout(thisTime);
-		var thisUB	=	$('.nav-ul li').index($(this));
-		if($.trim($('.nav-slide-o').eq(thisUB).html()) != "")
-		{
-			$('.nav-slide').addClass('hover');
-			$('.nav-slide-o').hide();
-			$('.nav-slide-o').eq(thisUB).show();
-		}
-		else{
-			$('.nav-slide').removeClass('hover');
-		}
-		
-	})
 	
-	function thisMouseOut(){
-		$('.nav-slide').removeClass('hover');
-	}
-	 
-	$('.nav-slide').mouseenter(function(){
-		clearTimeout(thisTime);
-		$('.nav-slide').addClass('hover');
-	})
-	$('.nav-slide').mouseleave(function(){
-		$('.nav-slide').removeClass('hover');
-	})
+		<div id="dialogBg"></div>
+		<div id="dialog" class="animated">
+			<img class="dialogIco" width="50" height="50" src="images/ico.png" alt="" />
+			<div class="dialogTop">
+				<a href="javascript:;" class="claseDialogBtn">Close</a>
+			</div>
+			<form action="" method="post" id="editForm">
+				<ul class="editInfos">
+					<li><label><font color="#ff0000">* </font>Username: <input type="text" name="" placeholder="(ex: Trump)" class="ipt" /></label></li>
+					<li><label><font color="#ff0000">* </font>Amount of money willing to pay<input type="text" name="" placeholder="$1000" class="ipt" /></label></li>
+					<li><label><font color="#ff0000">* </font>content: <br/><textarea name="content" cols="40" rows="5" id="content"></textarea></label></li>
+					<li><input type="submit" value="Ask Question" class="submitBtn" /></li>
+				</ul>
+			</form>
+		</div>
 	
-	function unlock(){
 		
-	}
+		<div id="dialogBg1"></div>
+		<div id="dialog1" class="animated">
+			<img class="dialogIco" width="50" height="50" src="images/credit_card.png" alt="" />
+			<div class="dialogTop">
+				<a href="javascript:;" class="claseDialogBtn">Close</a>
+			</div>
+			Are you sure you want to spend 1 dollar to unlock this answer???<br/>
+			<button id="popupButton">Yes,I do!</button><button id="popupButton">No!!!</button>
+		</div>
 
-})
-</script>
 	
 	</body>
 
