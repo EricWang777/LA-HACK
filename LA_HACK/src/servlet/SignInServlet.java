@@ -34,9 +34,13 @@ public class SignInServlet extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		InitializeDB.initialUser();
-		//System.out.println(UserDatabase.allUsers.size());
-		
+		if(UserDatabase.allUsers.size()==0)
+		{
+			InitializeDB.initialUser();
+			InitializeDB.initialQuestions();
+			System.out.println(QuestionDatabase.allQuestions.size());
+			//System.out.println(UserDatabase.allUsers.size());
+		}
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		String errorMessage = "";

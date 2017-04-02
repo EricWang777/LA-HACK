@@ -4,12 +4,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Question {
-	private String asker; // the user who ask this question
-	private String answerer; // the user who will answer this question
-	private double price; // price of this question
-	private String content;
-	private String answer;
-	private double numOfSneakers;
+	public String asker; // the user who ask this question
+	public String answerer; // the user who will answer this question
+	public double price; // price of this question
+	public String content;
+	public String answer;
+	public double numOfSneakers;
 	
 	
 	/**
@@ -31,6 +31,27 @@ public class Question {
 		this.price = price;
 		this.answer = "";
 		this.numOfSneakers = 0;
+	}
+	
+	public Question(String asker, String answerer, String content, double price,String answer,double sneakers){
+		this.asker = asker;
+		this.answerer = answerer;
+		this.content = content;
+		this.price = price;
+		this.answer = answer;
+		this.numOfSneakers = sneakers;
+	}
+	
+	public String firstline()
+	{
+		String result="";
+		if(this.content.length()<69)
+			return this.content;
+		for(int i=0;i<70;i++)
+		{
+			result+=this.content.charAt(i);
+		}
+		return result;
 	}
 	
 	public String getAsker() {

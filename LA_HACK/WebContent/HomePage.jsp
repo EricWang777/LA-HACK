@@ -88,6 +88,16 @@
 					$('#dialog').addClass('bounceOutUp').fadeOut();
 				});
 			});
+			$('#popupButton').click(function(){
+				$('#dialogBg1').fadeOut(300,function(){
+					$('#dialog1').addClass('bounceOutUp').fadeOut();
+				});
+			});
+			$('#popupButton2').click(function(){
+				$('#dialogBg1').fadeOut(300,function(){
+					$('#dialog1').addClass('bounceOutUp').fadeOut();
+				});
+			});
 			$('.claseDialogBtn').click(function(){
 				$('#dialogBg1').fadeOut(300,function(){
 					$('#dialog1').addClass('bounceOutUp').fadeOut();
@@ -230,23 +240,57 @@
 			</div>
 		</div>
 		</td></tr>
+		
 		<tr><td>
 		<div class="questionDiv">
-			<div class="question">
-			 These interrogative statements serve as launching points for the academic pursuit of new knowledge
-			  by directing and delimiting an investigation of a topic, a set of studies, or an entire program of research?
+		
+			<div class="block" id="smallContent" style="display:block; margin-left:10%;">
+				<span class="question">
+				 These interrogative statements serve as launching points 
+				<a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'" >View All</a>]
+				</span>
 			</div>
+			
+			<div class="block" id="fullContent" style="display:none; margin-left:10%; ">
+			<span class="question">
+			 These interrogative statements serve as launching points for the academic pursuit of new knowledge
+			  by directing and delimiting an investigation of a topic, a set of studies, or an entire program of research???
+			 <a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'" >View Back</a>]
+			 </span>
+			 </div>
+			
+			<br>
 			<div class="answer">
 				<div class="img">
 				  <img src="./images/profile_image_default.png" alt="The image" >
 				  <span>username</span>
 				</div>
-				<div class="content">
-				  <button>Click and Pay for this answer</button>
+				
+				<div class="block2" id="smallContent2" style="display:block; margin-left:10%;">
+			
+					<button> Click and Pay for this answer</button>
+				
 				</div>
+				
+				<div class="block2" id="fullContent2" style="display:none; margin-left:15%;">
+					These interrogative statements serve as launching points for the academic pursuit of new knowledge
+			 		 by directing and delimiting an investigation of a topic, a set of studies, or an entire program of research???
+			 		 Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
+			 		Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
+			 		Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
+					 Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
+			 		Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
+			 		Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
+			 		Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
+					 Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
+					 <a href="javascript:" onclick="document.all.fullContent2.style.display=(document.all.fullContent2.style.display=='none')?'':'none';document.all.smallContent2.style.display=(document.all.smallContent2.style.display=='none')?'':'none'" ></a>]			 
+				</div>
+				
 			</div>
 		</div>
 		</td></tr>
+		
+		
 		<tr><td>
 		<div class="questionDiv">
 			<div class="question">
@@ -337,23 +381,53 @@
 </div>
 </div>
 </div>
-	
+		<script>
+		function ask()
+		{
+			var answerer = document.question.answerer.value;
+			var price = document.question.price.value;
+			var content = document.question.content.value;
+			var xhttp = new XMLHttpRequest();
+			xhttp.open("GET","AskQuestionServlet?answerer="+answerer+"&price="+price+"&content="+content);
+			xhttp.onreadystatechange = function() {
+				if(xhttp.readyState == XMLHttpRequest.DONE && xhttp.status ==200)
+				{
+					var data = JSON.parse(this.responseText);
+					if(!data['ask'])
+					{
+						document.getElementById("error").innerHTML = data['message'];
+					}else
+					{
+						$('#dialogBg').fadeOut(300,function(){
+							$('#dialog').addClass('bounceOutUp').fadeOut();
+						});
+					}
+				}
+			}
+			
+			xhttp.send();
+			return false;
+		}
+		</script>
 		<div id="dialogBg"></div>
 		<div id="dialog" class="animated">
 			<img class="dialogIco" width="50" height="50" src="images/ico.png" alt="" />
 			<div class="dialogTop">
 				<a href="javascript:;" class="claseDialogBtn">Close</a>
 			</div>
-			<form action="" method="post" id="editForm">
+			<form name="question" method="GET" id="editForm" onsubmit="return ask();">
 				<ul class="editInfos">
-					<li><label><font color="#ff0000">* </font>Username: <input type="text" name="" placeholder="(ex: Trump)" class="ipt" /></label></li>
-					<li><label><font color="#ff0000">* </font>Amount of money willing to pay<input type="text" name="" placeholder="$1000" class="ipt" /></label></li>
+					<li><label><font color="#ff0000">* </font>username: <input type="text" name="answerer" placeholder="(ex: Trump)" class="ipt" /></label></li>
+					<li><label><font color="#ff0000">* </font>Amount of money willing to pay<input type="text" name="price" placeholder="$1000" class="ipt" /></label></li>
 					<li><label><font color="#ff0000">* </font>content: <br/><textarea name="content" cols="40" rows="5" id="content"></textarea></label></li>
-					<li><input type="submit" value="Ask Question" class="submitBtn" /></li>
+					<li><input type="submit" value="Ask Question" class="submitBtn"></li>
 				</ul>
+				<div id="error">
+				</div>
 			</form>
+			
 		</div>
-	
+		
 		
 		<div id="dialogBg1"></div>
 		<div id="dialog1" class="animated">
@@ -362,7 +436,8 @@
 				<a href="javascript:;" class="claseDialogBtn">Close</a>
 			</div>
 			Are you sure you want to spend 1 dollar to unlock this answer???<br/>
-			<button id="popupButton">Yes,I do!</button><button id="popupButton">No!!!</button>
+			<button id="popupButton" onclick="document.all.fullContent2.style.display=(document.all.fullContent2.style.display=='none')?'':'none';document.all.smallContent2.style.display=(document.all.smallContent2.style.display=='none')?'':'none'">Yes,I do!</button>
+			<button id="popupButton2" onclick="document.all.fullContent2.style.display=(document.all.fullContent2.style.display=='none')?'':'none';document.all.fullContent2.style.display=(document.all.fullContent2.style.display=='none')?'':'none'">No!!!</button>
 		</div>
 
 	
