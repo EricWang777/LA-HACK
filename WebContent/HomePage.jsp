@@ -95,6 +95,8 @@
 			<div class="answer">
 				<button onclick="unlock();" >Click and Pay for this answer</button>
 			</div>
+		
+			
 		</div>
 		</td></tr>
 		<tr><td>
