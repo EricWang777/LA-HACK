@@ -129,7 +129,7 @@ ol li.red { background: #FFFF00; }
 .hc-top-nd .hc-logobox { display: inline-block; padding: 10px; border-right: 1px solid rgba(0, 0, 0, .4); }
 #mainNav .hc-logobox img { height: 40px; }
 #mainNav .hc-contact,  #mainNav .hc-navbox { height: 30px; overflow: hidden; margin: 15px 10px auto 10px; }
-#mainNav .hc-navbox li { transition: .5s; top: 0; padding: 0 5px; }
+#mainNav .hc-navbox li { transition: .5s; top: 0; padding: 0 5px;}
 #mainNav .hc-navbox li:hover { transition: .5s; top: -30px; }
 #mainNav .hc-contact a { padding: 0 15px; line-height: 28px; display: inline-block; color: #666; border: 1px solid rgba(255, 255, 255, .8); border-radius: 30px; transition: .5s; }
 #mainNav .hc-contact a:nth-child(1),  #mainNav .hc-contact a:hover { background: #fccf12 !important; border-radius: 50px; color: #333 !important; transition: .5s; }

@@ -43,7 +43,7 @@
 				<ul id="navBox" class="nav navbar-nav navbar-right hc-navbox">
 					<li>
 						<a class="nav-on" href="#">
-						<img src="./images/home.png" alt="user_icon" width="30" height="30" class="userimage" id="user">
+							<img src="./images/home.png" alt="user_icon" width="30" height="30" class="userimage" id="user">
 						</a>
 						<a class="nav-off" href="#">Home Page</a>
 					</li>
@@ -178,7 +178,7 @@
 		<div class="nav">
   <ul class="nav-ul">
   	<li><a href="#" class="home"><span>Username</span></a></li>
-  	<li><a href="#" class="develop"><span>Account</span></a></li>
+  	<li><a href="#" class="develop"><span>Account Information</span></a></li>
   	<li><a href="#" class="wechat"><span>Credit</span></a></li>
   	<li><a href="#" class="case"><span>History</span></a></li>
   	<li><a href="#" class="news"><span>Contact us</span></a></li>
