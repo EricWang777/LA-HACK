@@ -193,8 +193,11 @@
 		<table id="questionTable">
 		<tr><td>
 		<div class="questionDiv">
-			<div class="question">
-			 Please tell me about your experience?
+			<div class="question" style="margin-left:10%">
+			 To Quentin Tarantino: I am a mediocre director with no big name. 
+			 I have made several movies but all of them got dismal box office and bad reputations. 
+			 The critics said I "lack vision to become good director". I am really confused right now. 
+			 Should I give up my dream? Could you give me some advice? 
 			</div>
 			<div class="answer">
 				<div class="img">
@@ -209,8 +212,8 @@
 		</td></tr>
 		<tr><td>
 		<div class="questionDiv">
-			<div class="question">
-			  Some questions are used principally as polite requests, as with "Would you pass the salt?"
+			<div class="question" style="margin-left:10%">
+			  To Gene D.Block: What do you think about the fact that USC surpasses UCLA in the latest US News Standing?
 			</div>
 			<div class="answer">
 				<div class="img">
@@ -225,7 +228,7 @@
 		</td></tr>
 		<tr><td>
 		<div class="questionDiv">
-			<div class="question">
+			<div class="question" style="margin-left:10%">
 			 The principal use of questions is to elicit information from the person being addressed by indicating the information which 
 			 the speaker (or writer) desires. However, questions can also be used for a number of other purposes?
 			</div>
@@ -246,16 +249,15 @@
 		
 			<div class="block" id="smallContent" style="display:block; margin-left:10%;">
 				<span class="question">
-				 These interrogative statements serve as launching points 
-				<a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'" >View All</a>]
+				 To Harsh Parmer(emotional expert): I married my best friend and I just admire
+				[<a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'" >View All</a>]
 				</span>
 			</div>
 			
 			<div class="block" id="fullContent" style="display:none; margin-left:10%; ">
 			<span class="question">
-			 These interrogative statements serve as launching points for the academic pursuit of new knowledge
-			  by directing and delimiting an investigation of a topic, a set of studies, or an entire program of research???
-			 <a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'" >View Back</a>]
+				To Harsh Parmer(emotional expert): I married my best friend and I just admire him as a person, but I don't love him. What should I do?
+			 [<a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'" >View Back</a>]
 			 </span>
 			 </div>
 			
@@ -273,17 +275,17 @@
 				</div>
 				
 				<div class="block2" id="fullContent2" style="display:none; margin-left:15%;">
-					These interrogative statements serve as launching points for the academic pursuit of new knowledge
-			 		 by directing and delimiting an investigation of a topic, a set of studies, or an entire program of research???
-			 		 Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
-			 		Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
-			 		Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
-					 Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
-			 		Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
-			 		Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
-			 		Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
-					 Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
-					 <a href="javascript:" onclick="document.all.fullContent2.style.display=(document.all.fullContent2.style.display=='none')?'':'none';document.all.smallContent2.style.display=(document.all.smallContent2.style.display=='none')?'':'none'" ></a>]			 
+					Love passes through many stages. At first, particularly with 'bad boys' or 'bad girls' it is exciting in the extreme. 
+					Hormones rage, passion is almost painful. Ideally every relationship would start that way, but people would not make the decision to live together until it wanes a bit (about six months). 
+					Then physical passion usually continues pretty strong for two years (I'm quoting studies) and then that wanes more slowly. 
+					Ideally you "loved" the person from the beginning in the sense of great respect for them, appreciation for their good qualities 
+					and the value those have to you and, also ideally, you actually "like" the person all the way along in the sense of having fun doing non-sexual things with them, perhaps extending to raising and enjoying kids, but certainly pastimes and more.
+					So, the trifecta is 'love, like and in love with' from the beginning, with the personal physical stuff between you playing less and less of a role 
+					as time goes on until the two of you find a common, enjoyable amount which could be from zero physical on up to nearly as passionate as the first six months - people vary all the way in between and rarely scale down their interests at exactly the same rate, leading to lots of worry, discord and unhappiness often.
+					If there was NO excitement at the beginning (sort of as you seem to describe), that's a lot to put onto the other two - 
+					having fun activities and respecting ideal qualities to live with, but no sparks and no memories of any to keep you warm, 
+					as many people are left with as the fire fades. One key piece is missing and it is the one that won't grow over time where the others might.
+					<a href="javascript:" onclick="document.all.fullContent2.style.display=(document.all.fullContent2.style.display=='none')?'':'none';document.all.smallContent2.style.display=(document.all.smallContent2.style.display=='none')?'':'none'" ></a>			 
 				</div>
 				
 			</div>
@@ -293,7 +295,7 @@
 		
 		<tr><td>
 		<div class="questionDiv">
-			<div class="question">
+			<div class="question" style="margin-left:10%">
 			 Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
 			 Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
 			</div>
