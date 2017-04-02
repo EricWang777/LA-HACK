@@ -121,10 +121,7 @@
 		else
 		{
 			currentUser = InitializeDB.currentUser;
-		}
-		
-		%>
-		
+		}%>
 	<body onmousemove="" ontouchstart="">
 
 		<nav id="mainNav" class="navbar navbar-default navbar-fixed-top hc-top-up">
@@ -194,24 +191,70 @@
 
 		<div id="right">
 		<table id="questionTable">
-		
-		<%for(int i = 0; i < QuestionDatabase.allQuestions.size(); i++){ 
-			Question q = QuestionDatabase.allQuestions.get(i);
-			
-		%>
 		<tr><td>
-		<div class="questionDiv" id="<%=i %>">
+		<div class="questionDiv">
+			<div class="question">
+			 Please tell me about your experience?
+			</div>
+			<div class="answer">
+				<div class="img">
+				  <img src="./images/profile_image_default.png" alt="The image" >
+				  <span>username</span>
+				</div>
+				<div class="content">
+				  <button>Click and Pay for this answer</button>
+				</div>
+			</div>
+		</div>
+		</td></tr>
+		<tr><td>
+		<div class="questionDiv">
+			<div class="question">
+			  Some questions are used principally as polite requests, as with "Would you pass the salt?"
+			</div>
+			<div class="answer">
+				<div class="img">
+				  <img src="./images/profile_image_default.png" alt="The image" >
+				  <span>username</span>
+				</div>
+				<div class="content">
+				  <button>Click and Pay for this answer</button>
+				</div>
+			</div>
+		</div>
+		</td></tr>
+		<tr><td>
+		<div class="questionDiv">
+			<div class="question">
+			 The principal use of questions is to elicit information from the person being addressed by indicating the information which 
+			 the speaker (or writer) desires. However, questions can also be used for a number of other purposes?
+			</div>
+			<div class="answer">
+				<div class="img">
+				  <img src="./images/profile_image_default.png" alt="The image" >
+				  <span>username</span>
+				</div>
+				<div class="content">
+				  <button>Click and Pay for this answer</button>
+				</div>
+			</div>
+		</div>
+		</td></tr>
+		
+		<tr><td>
+		<div class="questionDiv">
 		
 			<div class="block" id="smallContent" style="display:block; margin-left:10%;">
 				<span class="question">
-				 <%=q.getContent() %> 
+				 These interrogative statements serve as launching points 
 				[<a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'" >View All</a>]
 				</span>
 			</div>
 			
 			<div class="block" id="fullContent" style="display:none; margin-left:10%; ">
 			<span class="question">
-			 <%=q.getContent() %>
+			 These interrogative statements serve as launching points for the academic pursuit of new knowledge
+			  by directing and delimiting an investigation of a topic, a set of studies, or an entire program of research???
 			 [<a href="javascript:" onclick="document.all.fullContent.style.display=(document.all.fullContent.style.display=='none')?'':'none';document.all.smallContent.style.display=(document.all.smallContent.style.display=='none')?'':'none'" >View Back</a>]
 			 </span>
 			 </div>
@@ -231,7 +274,16 @@
 				
 				<div class="block2" id="fullContent2" style="display:none; margin-left:15%;">
 				
-					<%=q.getAnswer() %>
+					These interrogative statements serve as launching points for the academic pursuit of new knowledge
+			 		 by directing and delimiting an investigation of a topic, a set of studies, or an entire program of research???
+			 		 Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
+			 Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
+			 Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
+			 Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
+			 Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
+			 Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
+			 Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
+			 Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
 					 [<a href="javascript:" onclick="document.all.fullContent2.style.display=(document.all.fullContent2.style.display=='none')?'':'none';document.all.smallContent2.style.display=(document.all.smallContent2.style.display=='none')?'':'none'" ></a>]			 
 				
 				</div>
@@ -239,7 +291,25 @@
 			</div>
 		</div>
 		</td></tr>
-		<% }%>
+		
+		
+		<tr><td>
+		<div class="questionDiv">
+			<div class="question">
+			 Questions have developed a range of uses that go beyond the simple eliciting of information from another party. 
+			 Rhetorical questions, for example, are used to make a point, and are not expected to be answered?
+			</div>
+			<div class="answer">
+				<div class="img">
+				  <img src="./images/profile_image_default.png" alt="The image" >
+				  <span>username</span>
+				</div>
+				<div class="content">
+				  <button>Click and Pay for this answer</button>
+				</div>
+			</div>
+		</div>
+		</td></tr>
 		
 		
 		</table>
