@@ -17,6 +17,7 @@ body{
 	background-color:white;
 	width:75%;
 	height:1000px;
+	margin-top:50px;
 	overflow:auto;
 }
 #left{
@@ -29,7 +30,7 @@ body{
 }
 #search_box{
 	height:30px;
-	width:90%;
+	width:85%;
 	margin-left:20%;
 	border-radius:20px;	
 	padding-left:10px;
@@ -40,7 +41,63 @@ body{
 	width:20px;
 	position:absolute;
 	top:5px;
-	left:106%;
+	left:100%;
+}
+#questionTable{
+	width:100%;
+}
+.questionDiv{
+	height:200px;
+	width:80%;
+	background:#787877;
+	border-radius: 50px;
+	
+}
+.img{
+	float:left;
+	width:10%;
+	margin-left:15px;
+	margin-top: 30px;
+}
+
+.answer{
+	height:160px;
+	width:75%;
+	background-color:white;
+	margin-left: 80px;
+	margin-right:10px;
+	border: 3px solid lightblue;
+	border-radius: 20px;
+}
+
+button:hover{
+	cursor:pointer;
+}
+
+.answer button{
+	width:100px;
+	margin-top:50px;
+	margin-left:120px;
+	border: 2px solid white;
+	border-radius:20px;
+	width:50%;
+	height:50px;
+	
+}
+.img img{
+	border-radius:50px;
+	margin-top:10%;
+	width:45px;
+	height:45px;
+	
+}
+.question{
+	width:90%;
+	color:white;
+	margin-top:10px;
+	margin-left:5%;
+	font-size:1.3em;
+	line-height:30px;
 }
 .hc-top-up { background: rgba(0, 0, 0, 0); border-color: rgba(255, 255, 255, .4); transition: .5s; }
 .hc-top-nd { background: rgba(255, 255, 255, .9); border: none; box-shadow: 0px 0px 5px #888888; transition: .5s; }
